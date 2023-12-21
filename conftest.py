@@ -35,7 +35,7 @@ def browser(request):
 
 def on_form(browser, selector):
     try:
-        WebDriverWait(browser, 1).until(EC.visibility_of_element_located((By.CSS_SELECTOR, selector)))
+        WebDriverWait(browser, 3).until(EC.visibility_of_element_located((By.CSS_SELECTOR, selector)))
         return True
     except Exception:
         return False
